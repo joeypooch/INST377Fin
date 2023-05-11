@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Moneyball 23 </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    </head>
+
+    <body class="bg-secondary">
+        
+        <div class="wrapper">
+            
+            <div class="header">
+                
+                <div class="h1 orange-header">
+                    <header><h1><img src="imgs/os.png"  class="logo">Moneyball in the Modern Era  <img src="imgs/os.png"  class="logo"></h1></header>
+                    
+                </div>
+            </div>
+            <div class="menu gray-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="math.html">The Math</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="above_columns bg-white">
+                <div class="title">
+                    <h2 class="bg-orange">What is Moneyball?</h2>
+                </div>
+                <div class="description">
+                    <p>Moneyball is a statistical approach to baseball player evaluation that emphasizes on-field performance rather than traditional scouting methods.</p>
+                </div>
+            </div>
+            
+
+            <div class="container">
+                <div class="left_section box bg-orange rounded p-3">
+                    <h1>The Math:</h1>
+                    <div class="tbox bg-white">
+                        <p>The "basic" math behind moneyball, if you can call it basic
+                            is that wins are correlated to runs, which makes sense. 
+                            Run differential is the important metric, if you score more runs
+                            than you let up, you'll probably win games. Now, the interesting part
+                            is that other statistics, like On Base Percentage, are correlated to runs scored.
+                            By perfoming linear regressions with different statistics, we can find what stats 
+                            are correlated to runs for and against, and from there plug values in to find desired
+                            values. 
+                        </p>
+                        <p>Click <a href="math.html">HERE</a> to see more</p>
+                    </div>
+                </div>
+            
+                <div class="right_section box bg-orange rounded p-3">
+                    <h1>Teams:</h1>
+                    <label for="league-select">Select League:</label>
+                    <select id="league-select">
+                        <option value="">All</option>
+                        <option value="AL">AL</option>
+                        <option value="NL">NL</option>
+                    </select>
+                    <label for="division-select">Select Division:</label>
+                    <select id="division-select">
+                        <option value="">All</option>
+                        <option value="East">East</option>
+                        <option value="Central">Central</option>
+                        <option value="West">West</option>
+                    </select>
+                    <div id="standings"></div>
+                </div>
+            </div>
+            
+
+            <div class="footer bg-black">
+                <footer>
+                    Github: <a href="https://github.com/joeypooch/INST377Fin" class="text-orange">Repository</a>
+                </footer>
+            </div>
+            
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+    
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moneyball 23</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body class = 'bg-secondary'>
+  <div class="wrapper">
+    <div class="header">
+        <div class="h1 orange-header">
+            <header><h1> Moneyball in the Modern Era </h1></header>
+        </div>
+    </div>
+    <div class="menu gray-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="math.html">The Math</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="above_columns">
+        <div class="title">
+            <h2 class="bg-orange">The Math</h2>
+        </div>
+        <div class="description">
+            <p>The "basic" math behind moneyball, if you can call it basic, is that wins are correlated to runs, which makes sense. Run differential is the important metric; if you score more runs than you let up, you'll probably win games. Now, the interesting part is that other statistics, like On-Base Percentage, are correlated to runs scored. By performing linear regressions with different statistics, we can find what stats are correlated to runs for and against, and from there plug values in to find desired values.</p>
+        </div>
+    </div>
+    <div class="right_section text-center bg-orange">
+        <div class="title">
+            <h2 class="bg-white rounded p-2">Examples:</h2>
+        </div>
+        <div class="rounded">
+            <!-- Add a container for the chart -->
+            <div id="chart-container"></div>
+            
+            <p>Above are example images that demonstrate the correlation between different stats and success.</p>
+            <p>Run Differential can be correlated to wins, and OPS and ERA, to use an offensive and defensive stat, can be correlated to runs scored and against.</p>
+            <p> Doing A linear regression on different scores, we came up with these formulas to predict wins.
+                Runs Scored = -566.72 + 1704.81*OPS + 373.1*ISO
+                Runs Agaisnt = 69.24+158.66*ERA-24.49*K%
+                Wins = 81 + .1*RunDiff</p>
+            <p>See the expected wins for a team:</p>
+            <p>Format: Tampa Bay Rays</p>
+            <div class="container">      
+                <div>
+                    <form class= "team_select"> 
+                        <label for="name">Name:</label>
+                        <input type="text" id="team_name" name="Team Name:" required>
+                        <button type="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="form_response">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+      <footer>Github: <a href="https://github.com/joeypooch/INST377Fin">Repository</a></footer>
+    </div>
+  </div>
+  <script src="math.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</body>
+</html>
